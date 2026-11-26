@@ -14,6 +14,22 @@ title: Home
   </div>
 </section>
 
+<section class="showreel" aria-label="Showreel">
+  <div class="wrap">
+    <figure class="reel">
+      <video class="reel-video" autoplay muted loop playsinline preload="metadata"
+             poster="{{ '/assets/video/showreel-poster.jpg' | relative_url }}" data-reel>
+        <source src="{{ '/assets/video/showreel.webm' | relative_url }}" type="video/webm">
+        <source src="{{ '/assets/video/showreel.mp4' | relative_url }}" type="video/mp4">
+      </video>
+      <button class="reel-toggle" type="button" data-reel-toggle aria-label="Pause showreel">
+        <span class="reel-pause" aria-hidden="true">❚❚</span><span class="reel-play" aria-hidden="true">▶</span>
+      </button>
+      <figcaption>Showreel · VFX, shading, tooling and rigging</figcaption>
+    </figure>
+  </div>
+</section>
+
 <section class="section focus" aria-labelledby="focus-title">
   <div class="wrap">
     <h2 id="focus-title" class="label">What I focus on</h2>

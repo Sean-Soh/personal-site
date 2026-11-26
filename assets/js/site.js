@@ -35,6 +35,27 @@
     if (next) next.addEventListener('click', function () { step(1); });
   });
 
+  // Showreel ---------------------------------------------------------------
+  // Muted, looping background reel. Visitors who prefer reduced motion get the
+  // poster frame and can press play themselves; everyone gets a pause button.
+  var reel = document.querySelector('[data-reel]');
+  var reelBtn = document.querySelector('[data-reel-toggle]');
+  if (reel) {
+    var reelReduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function syncReel() {
+      var paused = reel.paused;
+      reel.closest('.reel').classList.toggle('is-paused', paused);
+      if (reelBtn) reelBtn.setAttribute('aria-label', paused ? 'Play showreel' : 'Pause showreel');
+    }
+    if (reelReduce) { reel.removeAttribute('autoplay'); reel.pause(); }
+    reel.addEventListener('play', syncReel);
+    reel.addEventListener('pause', syncReel);
+    if (reelBtn) reelBtn.addEventListener('click', function () {
+      if (reel.paused) reel.play(); else reel.pause();
+    });
+    syncReel();
+  }
+
   // Auto-scrolling rails --------------------------------------------------
   // Rails marked data-autoscroll drift slowly sideways. Hovering pauses them;
   // any real interaction (touch, drag, wheel, keyboard, arrow buttons) hands

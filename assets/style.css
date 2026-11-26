@@ -332,3 +332,21 @@ p { margin: 0 0 1em; }
 .cover-poster .cover-blur { position: absolute; inset: 0; filter: blur(18px) brightness(.55) saturate(1.2); transform: scale(1.15); }
 .cover-poster .cover-fit { position: relative; object-fit: contain; }
 .project-hero.is-poster img { width: auto; max-width: 100%; max-height: 38rem; margin: 0 auto; }
+
+/* Showreel on the home page */
+.showreel { padding: 0 0 clamp(1.5rem, 3vw, 2.5rem); }
+.reel { position: relative; margin: 0; }
+.reel-video {
+  display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000;
+  border-radius: calc(var(--radius) + 6px); border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--border));
+  box-shadow: 0 20px 60px rgb(0 0 0 / .45), 0 0 0 6px rgb(193 75 63 / .08);
+}
+.reel-toggle {
+  position: absolute; right: 1rem; bottom: 2.9rem; width: 2.6rem; height: 2.6rem; border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / .35); background: rgb(0 0 0 / .45); color: #fff; cursor: pointer;
+  font-size: .8rem; display: grid; place-items: center; backdrop-filter: blur(6px);
+}
+.reel-toggle:hover { border-color: var(--gold); color: var(--gold); }
+.reel .reel-play, .reel.is-paused .reel-pause { display: none; }
+.reel.is-paused .reel-play { display: inline; }
+.reel figcaption { margin-top: .7rem; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
