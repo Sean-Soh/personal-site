@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b1213">
   {%- assign page_title = page.title | default: site.title -%}
   <title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page_title }} | {{ site.title }}{% endif %}</title>
   {%- assign desc = page.summary | default: page.description | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
