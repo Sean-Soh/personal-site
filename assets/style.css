@@ -143,7 +143,7 @@ p { margin: 0 0 1em; }
     radial-gradient(60rem 28rem at 85% -10%, var(--glow), transparent 70%),
     radial-gradient(40rem 22rem at 0% 0%, rgb(224 165 58 / .08), transparent 70%);
 }
-.display { font-size: clamp(2.8rem, 1.6rem + 5vw, 6rem); line-height: .95; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
+.display { font-size: clamp(2.55rem, 1.35rem + 5vw, 5.75rem); line-height: .95; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
 .display em { font-style: normal; color: var(--link); }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 
@@ -334,23 +334,33 @@ p { margin: 0 0 1em; }
 .cover-poster .cover-fit { position: relative; object-fit: contain; }
 .project-hero.is-poster img { width: auto; max-width: 100%; max-height: 38rem; margin: 0 auto; }
 
-/* Showreel on the home page */
-.showreel { padding: 0 0 clamp(1.5rem, 3vw, 2.5rem); }
-.reel { position: relative; margin: 0; }
-.reel-video {
-  display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000;
-  border-radius: calc(var(--radius) + 6px); border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--border));
-  box-shadow: 0 20px 60px rgb(0 0 0 / .45), 0 0 0 6px rgb(193 75 63 / .08);
-}
+/* Showreel playing behind the home hero */
+.hero-reel { position: relative; overflow: hidden; isolation: isolate; background: #0d0809; color: #f4efea;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(3.5rem, 6vw, 5rem); }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+/* Darker behind the text (left), lighter on the right so the reel still shows, fading into the page below. */
+.hero-shade { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(13 8 9 / .88) 0%, rgb(13 8 9 / .72) 45%, rgb(13 8 9 / .25) 100%),
+    linear-gradient(180deg, rgb(13 8 9 / .25) 0%, transparent 30%, transparent 70%, var(--bg) 100%); }
+.hero-reel .wrap { position: relative; }
+.hero-reel .display { color: #fff; text-shadow: 0 2px 24px rgb(0 0 0 / .45); }
+.hero-reel .eyebrow, .hero-reel .display em { color: var(--gold); }
+.hero-reel .lede { color: rgb(244 239 234 / .86); }
+.hero-reel .button.ghost { color: #fff; border-color: rgb(255 255 255 / .45); }
+.hero-reel .button.ghost:hover { border-color: var(--gold); color: var(--gold); }
 .reel-toggle {
-  position: absolute; right: 1rem; bottom: 2.9rem; width: 2.6rem; height: 2.6rem; border-radius: 999px;
+  position: absolute; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 1; width: 2.6rem; height: 2.6rem; border-radius: 999px;
   border: 1px solid rgb(255 255 255 / .35); background: rgb(0 0 0 / .45); color: #fff; cursor: pointer;
   font-size: .8rem; display: grid; place-items: center; backdrop-filter: blur(6px);
 }
 .reel-toggle:hover { border-color: var(--gold); color: var(--gold); }
 .reel .reel-play, .reel.is-paused .reel-pause { display: none; }
 .reel.is-paused .reel-play { display: inline; }
-.reel figcaption { margin-top: .7rem; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.hero-reel + .focus { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
+@media (max-width: 700px) {
+  .hero-shade { background: linear-gradient(180deg, rgb(13 8 9 / .7) 0%, rgb(13 8 9 / .8) 60%, var(--bg) 100%); }
+}
 
 /* Projects page: large two-column project cards */
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem); margin-top: 2rem; }

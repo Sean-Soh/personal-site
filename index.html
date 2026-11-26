@@ -2,7 +2,16 @@
 layout: default
 title: Home
 ---
-<section class="hero">
+<section class="hero hero-reel reel">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"
+         poster="{{ '/assets/video/showreel-poster.jpg' | relative_url }}" data-reel>
+    <source src="{{ '/assets/video/showreel.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/video/showreel.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <button class="reel-toggle" type="button" data-reel-toggle aria-label="Pause showreel">
+    <span class="reel-pause" aria-hidden="true">❚❚</span><span class="reel-play" aria-hidden="true">▶</span>
+  </button>
   <div class="wrap">
     <p class="eyebrow">{{ site.author.role_line }}</p>
     <h1 class="display">Bridging creative direction and software engineering to ship <em>visually ambitious games</em> at scale.</h1>
@@ -11,22 +20,6 @@ title: Home
       <a class="button" href="{{ '/blog/' | relative_url }}">Read the blog</a>
       <a class="button ghost" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>
     </div>
-  </div>
-</section>
-
-<section class="showreel" aria-label="Showreel">
-  <div class="wrap">
-    <figure class="reel">
-      <video class="reel-video" autoplay muted loop playsinline preload="metadata"
-             poster="{{ '/assets/video/showreel-poster.jpg' | relative_url }}" data-reel>
-        <source src="{{ '/assets/video/showreel.webm' | relative_url }}" type="video/webm">
-        <source src="{{ '/assets/video/showreel.mp4' | relative_url }}" type="video/mp4">
-      </video>
-      <button class="reel-toggle" type="button" data-reel-toggle aria-label="Pause showreel">
-        <span class="reel-pause" aria-hidden="true">❚❚</span><span class="reel-play" aria-hidden="true">▶</span>
-      </button>
-      <figcaption>Showreel · VFX, shading, tooling and rigging</figcaption>
-    </figure>
   </div>
 </section>
 
