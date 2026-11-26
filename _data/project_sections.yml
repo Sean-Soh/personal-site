@@ -1,0 +1,7 @@
+# Sections on the Projects page, in order. Each project picks one with `category:`.
+- id: games
+  title: Games
+  intro: Games I have worked on, across PC, console, mobile and location-based VR.
+- id: film
+  title: TV Animation & Film
+  intro: Animated series, films and CG productions from my years in animation.

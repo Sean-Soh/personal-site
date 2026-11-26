@@ -8,6 +8,7 @@ meta: "Sandbox VR · Senior Technical Artist"
 summary: "Sandbox VR's full-body, multiplayer fantasy adventure in location-based virtual reality."
 tags: [Location-based VR, Full-body]
 order: 4
+category: games
 image: /assets/images/projects/seekers-of-the-shard-cover.jpg
 hero: /assets/images/projects/seekers-of-the-shard-hero.jpg
 gallery:

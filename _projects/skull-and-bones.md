@@ -8,6 +8,7 @@ meta: "Ubisoft Singapore · Senior Technical Artist, VFX"
 summary: "Ubisoft's open-world naval action game about rising through the ranks of a pirate empire."
 tags: [Open world, Naval action]
 order: 3
+category: games
 image: /assets/images/projects/skull-and-bones-cover.jpg
 gallery:
   - /assets/images/projects/skull-and-bones-2.jpg

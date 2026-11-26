@@ -8,6 +8,7 @@ meta: "Riot Games · Manager, Technical Art"
 summary: "Riot Games' round-based strategy auto battler set in the League of Legends universe."
 tags: [Auto battler, PC, Mobile]
 order: 2
+category: games
 image: /assets/images/projects/teamfight-tactics-cover.jpg
 gallery:
   - /assets/images/projects/teamfight-tactics-2.jpg

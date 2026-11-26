@@ -5,10 +5,22 @@ title: Projects
 <div class="wrap page">
   <header class="page-head">
     <h1>Projects</h1>
-    <p class="lede">Games I have worked on, across PC, console, mobile and location-based VR.</p>
+    <p class="lede">Two decades across games, TV animation and film.</p>
+    <nav class="section-jump" aria-label="Project sections">
+      {%- for sec in site.data.project_sections -%}
+      <a class="chip" href="#{{ sec.id }}">{{ sec.title }}</a>
+      {%- endfor -%}
+    </nav>
   </header>
-  {%- assign items = site.projects | sort: "order" -%}
-  <div class="grid">
-    {%- for item in items -%}{% include card.html item=item kind="projects" %}{%- endfor -%}
-  </div>
+  {%- assign all = site.projects | sort: "order" -%}
+  {%- for sec in site.data.project_sections -%}
+  {%- assign items = all | where: "category", sec.id -%}
+  <section class="project-section" id="{{ sec.id }}" aria-labelledby="{{ sec.id }}-title">
+    <h2 id="{{ sec.id }}-title">{{ sec.title }}</h2>
+    <p class="muted">{{ sec.intro }}</p>
+    <div class="grid">
+      {%- for item in items -%}{% include card.html item=item kind="projects" %}{%- endfor -%}
+    </div>
+  </section>
+  {%- endfor -%}
 </div>

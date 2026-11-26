@@ -8,6 +8,7 @@ meta: "Riot Games · Manager, Technical Art"
 summary: "Riot Games' free-to-play 5v5 team strategy game, played by millions every month."
 tags: [MOBA, PC]
 order: 1
+category: games
 image: /assets/images/projects/league-of-legends-cover.jpg
 hero: /assets/images/projects/league-of-legends-hero.jpg
 gallery:
