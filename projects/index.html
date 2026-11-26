@@ -19,7 +19,7 @@ title: Projects
     <h2 id="{{ sec.id }}-title">{{ sec.title }}</h2>
     <p class="muted">{{ sec.intro }}</p>
     <div class="tiles">
-      {%- for item in items -%}{% include project-tile.html item=item index=forloop.index %}{%- endfor -%}
+      {%- for item in items -%}{% include project-tile.html item=item %}{%- endfor -%}
     </div>
   </section>
   {%- endfor -%}

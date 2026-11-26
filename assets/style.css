@@ -29,6 +29,7 @@
   --gutter: 1.25rem;
   --radius: 14px;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --font-display: "Bebas Neue", "Oswald", "Impact", "Arial Narrow", sans-serif;
   color-scheme: dark;
 }
@@ -351,29 +352,23 @@ p { margin: 0 0 1em; }
 .reel.is-paused .reel-play { display: inline; }
 .reel figcaption { margin-top: .7rem; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 
-/* Projects page: large alternating tiles */
-.tiles { display: grid; gap: clamp(2.5rem, 6vw, 5rem); margin-top: 2rem; }
-.tile { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
-.tile:nth-child(even) .tile-media { order: 2; }
-.tile-media { display: block; border-radius: calc(var(--radius) + 4px); overflow: hidden; border: 1px solid var(--border); }
+/* Projects page: large two-column project cards */
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem); margin-top: 2rem; }
+.tile { display: flex; flex-direction: column; }
+.tile-media { display: block; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 1.4rem; }
 .tile-media .cover { transition: transform .5s ease; }
 .tile:hover .tile-media .cover { transform: scale(1.03); }
 .tile:hover .tile-media { border-color: color-mix(in srgb, var(--gold) 50%, var(--border)); }
-.tile-num { font-family: var(--font-display); font-size: 1.4rem; color: var(--link); letter-spacing: .05em; }
-.tile-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 1.6rem + 2.6vw, 3.8rem); line-height: .95; letter-spacing: .015em; margin: .15em 0 .5em; }
+.tile-meta { font-family: var(--font-mono); font-size: .86rem; color: var(--link); margin: 0 0 .55rem; }
+.tile-meta span + span::before { content: " / "; }
+.tile-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 1.5rem + 1.4vw, 2.7rem); line-height: 1; letter-spacing: .015em; margin: 0 0 .35rem; }
 .tile-title a { color: var(--text); text-decoration: none; }
 .tile-title a:hover { color: var(--link); }
-.tile-facts { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin: 0 0 1rem; padding: 0 0 1rem; border-bottom: 1px solid var(--border); }
-.tile-facts dt { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-.tile-facts dd { margin: .15rem 0 0; font-weight: 600; font-size: .95rem; }
-.tile-summary { color: var(--muted); font-size: 1.02rem; }
-.tile .tags { margin-bottom: 1.25rem; }
-.tile-more { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: .08em; font-size: .82rem; }
-.tile-more .icon { transition: transform .2s; }
-.tile-more:hover .icon { transform: translateX(4px); }
+.tile-role { font-weight: 600; font-size: .95rem; margin: 0 0 .7rem; }
+.tile-summary { color: var(--muted); font-size: 1rem; margin: 0 0 1.1rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tile-more { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-weight: 700; font-size: .95rem; text-decoration: none; }
+.tile-more .arrow { transition: transform .2s; }
+.tile-more:hover .arrow { transform: translateX(4px); }
 .project-section > h2 { font-size: clamp(2.6rem, 1.8rem + 3vw, 4.2rem); margin-bottom: .2em; }
-@media (max-width: 820px) {
-  .tile { grid-template-columns: 1fr; }
-  .tile:nth-child(even) .tile-media { order: 0; }
-}
-@media (prefers-reduced-motion: reduce) { .tile-media .cover, .tile-more .icon { transition: none; } }
+@media (max-width: 760px) { .tiles { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .tile-media .cover, .tile-more .arrow { transition: none; } }
