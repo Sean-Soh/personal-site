@@ -11,7 +11,7 @@ layout: default
   </header>
   {%- assign hero = page.hero | default: page.image -%}
   {%- if hero -%}
-  <figure class="project-hero"><img src="{{ hero | relative_url }}" alt="{{ page.title }} key art"></figure>
+  <figure class="project-hero{% if page.poster %} is-poster{% endif %}"><img src="{{ hero | relative_url }}" alt="{{ page.title }} key art"></figure>
   {%- else -%}
   {% include cover.html item=page %}
   {%- endif -%}

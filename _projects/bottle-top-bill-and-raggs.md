@@ -8,7 +8,8 @@ summary: "Bottle Top Bill Season 1 and Raggs 3D animation, working across stop m
 tags: [Series, Stop motion, 3D]
 order: 20
 category: film
-hue: 120
+image: /assets/images/projects/bottle-top-bill-and-raggs-poster.jpg
+poster: true
 ---
 
 ## About the production

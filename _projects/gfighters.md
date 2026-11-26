@@ -1,5 +1,5 @@
 ---
-title: "GFighter"
+title: "GFighters"
 studio: Tiny Island Productions
 role: "Producer"
 period: "2011 – 2015"
@@ -7,15 +7,15 @@ client: "Cyber Group Studios"
 meta: "Cyber Group Studios · Tiny Island Productions"
 summary: "A 26 × 22-minute animated series."
 tags: [Series, CG animation]
-order: 14
+order: 15
 category: film
-hue: 40
-# image: /assets/images/projects/gfighter-cover.jpg   # add a still or poster here
+image: /assets/images/projects/gfighters-poster.jpg
+poster: true
 ---
 
 ## About the production
 
-GFighter is a 26 × 22-minute animated series for Cyber Group Studios, produced with Tiny Island Productions.
+GFighters is a 26 × 22-minute animated series for Cyber Group Studios, produced with Tiny Island Productions.
 
 ## My role
 

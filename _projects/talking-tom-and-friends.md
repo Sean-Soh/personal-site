@@ -9,8 +9,8 @@ summary: "An episodic animated series."
 tags: [Series, CG animation]
 order: 12
 category: film
-hue: 200
-# image: /assets/images/projects/talking-tom-and-friends-cover.jpg   # add a still or poster here
+image: /assets/images/projects/talking-tom-and-friends-poster.jpg
+poster: true
 ---
 
 ## About the production

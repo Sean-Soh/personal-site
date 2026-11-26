@@ -1,6 +1,13 @@
-{%- comment -%} Card cover: an image if the item has one, otherwise a generated gradient. {%- endcomment -%}
+{%- comment -%}
+  Card cover: an image if the item has one, otherwise a generated gradient.
+  With `poster: true` the whole image is shown (no cropping) over a blurred copy of itself,
+  so portrait posters fit the same 16:9 card as landscape key art.
+{%- endcomment -%}
 {%- assign item = include.item -%}
-<div class="cover{% unless item.image %} cover-gen{% endunless %}" style="--hue: {{ item.hue | default: 160 }}">
-  {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
+<div class="cover{% unless item.image %} cover-gen{% endunless %}{% if item.poster %} cover-poster{% endif %}" style="--hue: {{ item.hue | default: 160 }}">
+  {%- if item.image and item.poster -%}
+    <img class="cover-blur" src="{{ item.image | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+    <img class="cover-fit" src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
+  {%- elsif item.image -%}<img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
   {%- endif -%}
 </div>

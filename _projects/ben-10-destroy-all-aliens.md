@@ -9,8 +9,8 @@ summary: "A 69-minute CG animated film."
 tags: [Film, CG animation]
 order: 11
 category: film
-hue: 15
-# image: /assets/images/projects/ben-10-destroy-all-aliens-cover.jpg   # add a still or poster here
+image: /assets/images/projects/ben-10-destroy-all-aliens-poster.jpg
+poster: true
 ---
 
 ## About the production

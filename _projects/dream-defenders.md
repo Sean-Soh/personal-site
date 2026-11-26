@@ -6,10 +6,10 @@ period: "2011 – 2015"
 meta: "Tiny Island Productions original"
 summary: "A 26 × 22-minute animated series."
 tags: [Series, CG animation]
-order: 13
+order: 14
 category: film
-hue: 300
-# image: /assets/images/projects/dream-defenders-cover.jpg   # add a still or poster here
+image: /assets/images/projects/dream-defenders-poster.jpg
+poster: true
 ---
 
 ## About the production
