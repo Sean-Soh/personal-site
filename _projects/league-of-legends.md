@@ -28,7 +28,6 @@ I lead Technical Art at Riot Games in Singapore, working across League of Legend
 - **Rendering and visual realization.** Drive rendering strategy with Art Direction and Engineering, balancing creative ambition against performance and production feasibility.
 - **Shader and material infrastructure.** Contribute to shader modernization, material system improvements and the evolution of the rendering pipeline.
 - **Material consistency at scale.** Led a cross-functional effort to resolve inconsistencies across 100+ base materials and roughly 5,000 assets, laying the groundwork for broader shader infrastructure improvements.
-- **Interactive experiences.** Lead technical implementation and optimization for interactive experiences, including the Soul Fighter metagames and Battle of Koeshin.
 
 ## Impact
 
