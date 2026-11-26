@@ -1,10 +1,10 @@
 ---
 title: "Teamfight Tactics"
 studio: Riot Games
-role: "Role to confirm"          # TODO: your title on this project (from LinkedIn)
-# period: "2021 – 2023"          # TODO: when you worked on it
+role: "Manager, Technical Art"
+period: "Nov 2021 – present"
 platforms: "PC, iOS, Android"
-meta: "Riot Games"
+meta: "Riot Games · Manager, Technical Art"
 summary: "Riot Games' round-based strategy auto battler set in the League of Legends universe."
 tags: [Auto battler, PC, Mobile]
 order: 2
@@ -20,12 +20,16 @@ Teamfight Tactics (TFT) is Riot Games' free-to-play auto battler, launched in 20
 
 ## My role
 
-<p class="todo">Draft placeholder: add your title, team and dates here. One or two sentences on what you owned.</p>
+As Manager, Technical Art at Riot Games, I provide Technical Art leadership for Teamfight Tactics alongside League of Legends, with a focus on visual realization, technical direction and scalable content production for a game that ships a new set of characters, boards and effects on a regular cadence.
 
 ## What I worked on
 
-<p class="todo">Draft placeholder: 3–5 bullets, for example pipelines, tools, shaders or features you built, and who used them.</p>
+- **Scalable content production.** Built centralized production tracking and workflow systems that improve visibility and coordination across distributed teams.
+- **Faster localization.** Guided workflow optimizations that cut Motion Comics localization turnaround from multiple days to about one day.
+- **Leading Technical Artists.** Lead and mentor Technical Artists across internal and external teams, supporting craft growth, clear ownership and production autonomy.
+- **Cross-studio partnership.** Partner with Art, Engineering, TechOps and Production across studios to align technical investment with creative and product priorities.
 
 ## Impact
 
-<p class="todo">Draft placeholder: results you can share, such as performance gains, time saved for artists, or features shipped.</p>
+- Motion Comics localization: from multiple days to roughly one day.
+- Clearer production visibility across geographically distributed teams.

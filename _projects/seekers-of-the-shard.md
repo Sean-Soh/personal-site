@@ -1,10 +1,10 @@
 ---
 title: "Seekers of the Shard: Dragonfire"
 studio: Sandbox VR
-role: "Role to confirm"          # TODO: your title on this project (from LinkedIn)
-# period: "2021 – 2023"          # TODO: when you worked on it
+role: "Senior Technical Artist"
+period: "Nov 2019 – May 2020"
 platforms: "Sandbox VR locations"
-meta: "Sandbox VR"
+meta: "Sandbox VR · Senior Technical Artist"
 summary: "Sandbox VR's full-body, multiplayer fantasy adventure in location-based virtual reality."
 tags: [Location-based VR, Full-body]
 order: 4
@@ -21,12 +21,14 @@ Seekers of the Shard: Dragonfire is a fantasy adventure from Sandbox VR, played 
 
 ## My role
 
-<p class="todo">Draft placeholder: add your title, team and dates here. One or two sentences on what you owned.</p>
+At Sandbox VR I was a Senior Technical Artist, owning the shading, VFX and rendering pipelines for its next-generation, full-body VR experiences, and leading R&D into efficient VFX methods and asset authoring to reach AAA production quality in VR.
 
 ## What I worked on
 
-<p class="todo">Draft placeholder: 3–5 bullets, for example pipelines, tools, shaders or features you built, and who used them.</p>
+- **Render pipeline migration.** Ported the entire project from Unity's legacy render pipeline to a playable HDRP VR build within a short timeframe.
+- **Shaders and VFX.** Created and optimized visual art assets, VFX and custom shaders using Shader Graph, VFX Graph, HLSL, Houdini and C#.
+- **R&D for VR.** Explored efficient visual effects techniques and authoring workflows that hold up at VR frame rates.
 
 ## Impact
 
-<p class="todo">Draft placeholder: results you can share, such as performance gains, time saved for artists, or features shipped.</p>
+- Full project moved to HDRP and playable in VR on a tight schedule.

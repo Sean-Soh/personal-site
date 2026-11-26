@@ -1,10 +1,10 @@
 ---
 title: "League of Legends"
 studio: Riot Games
-role: "Role to confirm"          # TODO: your title on this project (from LinkedIn)
-# period: "2021 – 2023"          # TODO: when you worked on it
+role: "Manager, Technical Art"
+period: "Nov 2021 – present"
 platforms: "PC"
-meta: "Riot Games"
+meta: "Riot Games · Manager, Technical Art"
 summary: "Riot Games' free-to-play 5v5 team strategy game, played by millions every month."
 tags: [MOBA, PC]
 order: 1
@@ -21,12 +21,16 @@ League of Legends is Riot Games' free-to-play multiplayer online battle arena (M
 
 ## My role
 
-<p class="todo">Draft placeholder: add your title, team and dates here. One or two sentences on what you owned.</p>
+I lead Technical Art at Riot Games in Singapore, working across League of Legends and Teamfight Tactics. My focus is rendering, visual realization and technical direction: helping Art Directors, Rendering Engineers and Technical Artists turn a creative vision into something that ships, runs well and can be produced at scale.
 
 ## What I worked on
 
-<p class="todo">Draft placeholder: 3–5 bullets, for example pipelines, tools, shaders or features you built, and who used them.</p>
+- **Rendering and visual realization.** Drive rendering strategy with Art Direction and Engineering, balancing creative ambition against performance and production feasibility.
+- **Shader and material infrastructure.** Contribute to shader modernization, material system improvements and the evolution of the rendering pipeline.
+- **Material consistency at scale.** Led a cross-functional effort to resolve inconsistencies across 100+ base materials and roughly 5,000 assets, laying the groundwork for broader shader infrastructure improvements.
+- **Interactive experiences.** Lead technical implementation and optimization for interactive experiences, including the Soul Fighter metagames and Battle of Koeshin.
 
 ## Impact
 
-<p class="todo">Draft placeholder: results you can share, such as performance gains, time saved for artists, or features shipped.</p>
+- 100+ base materials and ~5,000 assets brought into a consistent, maintainable state.
+- Technical standards and onboarding practices that help Technical Artists work with more ownership and autonomy.

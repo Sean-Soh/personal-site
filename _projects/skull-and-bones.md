@@ -1,10 +1,10 @@
 ---
 title: "Skull and Bones"
-studio: Ubisoft
-role: "Role to confirm"          # TODO: your title on this project (from LinkedIn)
-# period: "2021 – 2023"          # TODO: when you worked on it
+studio: Ubisoft Singapore
+role: "Senior Technical Artist, VFX"
+period: "May 2020 – Nov 2021"
 platforms: "PS5, Xbox Series X|S, PC"
-meta: "Ubisoft"
+meta: "Ubisoft Singapore · Senior Technical Artist, VFX"
 summary: "Ubisoft's open-world naval action game about rising through the ranks of a pirate empire."
 tags: [Open world, Naval action]
 order: 3
@@ -20,12 +20,10 @@ Skull and Bones is an open-world naval action game by Ubisoft, led by Ubisoft Si
 
 ## My role
 
-<p class="todo">Draft placeholder: add your title, team and dates here. One or two sentences on what you owned.</p>
+I was a Senior Technical Artist on the VFX team at Ubisoft Singapore, the lead studio on Skull and Bones. My job was to give the VFX artists the shaders, tools and pipelines they needed to deliver the game's effects.
 
 ## What I worked on
 
-<p class="todo">Draft placeholder: 3–5 bullets, for example pipelines, tools, shaders or features you built, and who used them.</p>
-
-## Impact
-
-<p class="todo">Draft placeholder: results you can share, such as performance gains, time saved for artists, or features shipped.</p>
+- **Shaders and materials** for VFX, with a focus on FX rendering.
+- **Tools and systems** built to solve practical, day-to-day problems for the VFX team.
+- **Validation pipeline.** Set up and maintained the validation pipeline for VFX assets, catching issues before they reached the build.
