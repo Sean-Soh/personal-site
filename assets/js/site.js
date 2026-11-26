@@ -35,6 +35,60 @@
     if (next) next.addEventListener('click', function () { step(1); });
   });
 
+  // Auto-scrolling rails --------------------------------------------------
+  // Rails marked data-autoscroll drift slowly sideways. Hovering pauses them;
+  // any real interaction (touch, drag, wheel, keyboard, arrow buttons) hands
+  // control to the visitor and stops the drift for good. Skipped entirely for
+  // visitors who prefer reduced motion.
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-autoscroll]').forEach(function (rail) {
+    if (reduce) return;
+    var section = rail.closest('.section') || rail;
+    var SPEED = 30;            // pixels per second
+    var stopped = false, hovering = false, visible = true, holdUntil = 0;
+    var pos = rail.scrollLeft, last = null;
+
+    function stop() {
+      if (stopped) return;
+      stopped = true;
+      rail.classList.remove('is-auto');
+    }
+    function tick(t) {
+      if (stopped) return;
+      var max = rail.scrollWidth - rail.clientWidth;
+      if (last !== null && !hovering && visible && !document.hidden && max > 4 && t > holdUntil) {
+        var dt = Math.min((t - last) / 1000, 0.1);
+        pos += SPEED * dt;
+        if (pos >= max) {
+          // Reached the end: rest a moment, glide back to the start, then carry on.
+          pos = 0; holdUntil = t + 2500;
+          rail.classList.remove('is-auto');
+          rail.scrollTo({ left: 0, behavior: 'smooth' });
+          setTimeout(function () { if (!stopped) rail.classList.add('is-auto'); }, 1200);
+        } else {
+          rail.scrollLeft = pos;
+        }
+      }
+      last = t;
+      requestAnimationFrame(tick);
+    }
+
+    rail.classList.add('is-auto');
+    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (ev) {
+      rail.addEventListener(ev, stop, { passive: true });
+    });
+    section.querySelectorAll('[data-rail-prev], [data-rail-next]').forEach(function (b) {
+      b.addEventListener('click', stop);
+    });
+    rail.addEventListener('focusin', stop);
+    rail.addEventListener('mouseenter', function () { hovering = true; });
+    rail.addEventListener('mouseleave', function () { hovering = false; pos = rail.scrollLeft; });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }).observe(rail);
+    }
+    requestAnimationFrame(tick);
+  });
+
   // Blog tag filter (supports ?tag=name links) -------------------------
   var filter = document.querySelector('[data-filter]');
   if (filter) {

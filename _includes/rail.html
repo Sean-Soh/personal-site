@@ -1,6 +1,6 @@
 {%- comment -%}
   Horizontal card rail used on the home page.
-  Params: id, title, intro, items, kind, all_url
+  Params: id, title, intro, items, kind, all_url, autoscroll (true = drifts sideways until the visitor interacts)
 {%- endcomment -%}
 <section class="section" id="{{ include.id }}" aria-labelledby="{{ include.id }}-title">
   <div class="wrap">
@@ -16,7 +16,7 @@
       </div>
     </div>
   </div>
-  <div class="rail" data-rail tabindex="0" aria-label="{{ include.title }}">
+  <div class="rail" data-rail{% if include.autoscroll %} data-autoscroll{% endif %} tabindex="0" aria-label="{{ include.title }}">
     {%- for item in include.items -%}
       {% include card.html item=item kind=include.kind %}
     {%- endfor -%}

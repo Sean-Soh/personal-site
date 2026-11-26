@@ -29,7 +29,7 @@
   --gutter: 1.25rem;
   --radius: 14px;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Archivo", "Arial Black", "Helvetica Neue", sans-serif;
+  --font-display: "Bebas Neue", "Oswald", "Impact", "Arial Narrow", sans-serif;
   color-scheme: dark;
 }
 /* Optional light version, only when the visitor picks it with the toggle. */
@@ -60,8 +60,8 @@ body {
 img { max-width: 100%; display: block; }
 a { color: var(--link); text-underline-offset: .2em; }
 h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; font-weight: 600; }
-h1, h2, .display { font-family: var(--font-display); font-weight: 900; letter-spacing: -.015em; word-spacing: .06em; }
-h2 { font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
+h1, h2, .display { font-family: var(--font-display); font-weight: 400; letter-spacing: .015em; line-height: 1; }
+h2 { font-size: clamp(2rem, 1.5rem + 1.6vw, 2.8rem); }
 h3 { font-size: 1.05rem; }
 p { margin: 0 0 1em; }
 .muted { color: var(--muted); }
@@ -142,8 +142,8 @@ p { margin: 0 0 1em; }
     radial-gradient(60rem 28rem at 85% -10%, var(--glow), transparent 70%),
     radial-gradient(40rem 22rem at 0% 0%, rgb(224 165 58 / .08), transparent 70%);
 }
-.display { font-size: clamp(2.1rem, 1.3rem + 3.2vw, 3.8rem); line-height: 1.05; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
-.display em { font-style: italic; color: var(--link); }
+.display { font-size: clamp(2.8rem, 1.6rem + 5vw, 6rem); line-height: .95; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
+.display em { font-style: normal; color: var(--link); }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 
 /* Sections -------------------------------------------------------------- */
@@ -170,6 +170,7 @@ p { margin: 0 0 1em; }
   padding: .25rem var(--inset) 1.25rem; scrollbar-width: thin;
 }
 .rail > * { scroll-snap-align: start; }
+.rail.is-auto { scroll-snap-type: none; }
 
 /* Cards ----------------------------------------------------------------- */
 .card {
@@ -231,14 +232,14 @@ p { margin: 0 0 1em; }
 /* Pages and prose ------------------------------------------------------- */
 .page { padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: 4rem; }
 .page-head { margin-bottom: 2.5rem; }
-.page-head h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.1rem); margin: .3em 0 .4em; }
+.page-head h1 { font-size: clamp(2.8rem, 1.8rem + 3.6vw, 4.6rem); margin: .3em 0 .4em; }
 .page-head .tags { margin-top: 1rem; }
 .prose { font-size: 1.06rem; }
 .prose h2 { margin-top: 2.2em; }
 .prose h3 { margin-top: 1.6em; }
 .prose blockquote {
   margin: 1.5em 0; padding: .2em 0 .2em 1.2em; border-left: 3px solid var(--red);
-  font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--text);
+  font-weight: 600; font-size: 1.2rem; color: var(--text);
 }
 .prose code { font-size: .9em; background: var(--chip); padding: .1em .35em; border-radius: 5px; }
 .prose pre { background: var(--chip); padding: 1rem; border-radius: 10px; overflow-x: auto; }
@@ -257,7 +258,7 @@ p { margin: 0 0 1em; }
   border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--border));
 }
 .cta { margin-top: 3.5rem; padding: 2rem; border-radius: var(--radius); }
-.cta h2 { font-size: 1.5rem; }
+.cta h2 { font-size: 2rem; }
 
 .timeline { list-style: none; padding: 0; margin: 1.5rem 0; border-left: 2px solid var(--border); }
 .timeline li { position: relative; padding: 0 0 1.75rem 1.5rem; }
