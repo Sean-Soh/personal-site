@@ -9,10 +9,29 @@ layout: default
     {%- if page.summary -%}<p class="lede">{{ page.summary }}</p>{%- endif -%}
     {%- if page.tags.size > 0 -%}<ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>{%- endif -%}
   </header>
+  {%- assign hero = page.hero | default: page.image -%}
+  {%- if hero -%}
+  <figure class="project-hero"><img src="{{ hero | relative_url }}" alt="{{ page.title }} key art"></figure>
+  {%- else -%}
   {% include cover.html item=page %}
+  {%- endif -%}
+  {%- if page.studio or page.role -%}
+  <dl class="facts">
+    {%- if page.studio -%}<div><dt>Studio</dt><dd>{{ page.studio }}</dd></div>{%- endif -%}
+    {%- if page.role -%}<div><dt>My role</dt><dd>{{ page.role }}</dd></div>{%- endif -%}
+    {%- if page.period -%}<div><dt>When</dt><dd>{{ page.period }}</dd></div>{%- endif -%}
+    {%- if page.platforms -%}<div><dt>Platforms</dt><dd>{{ page.platforms }}</dd></div>{%- endif -%}
+  </dl>
+  {%- endif -%}
   <div class="prose">
     {{ content }}
   </div>
+  {%- if page.gallery -%}
+  <div class="gallery">
+    {%- for g in page.gallery -%}<img src="{{ g | relative_url }}" alt="{{ page.title }} artwork" loading="lazy">{%- endfor -%}
+  </div>
+  {%- endif -%}
+  {%- if page.credit -%}<p class="credit muted">{{ page.credit }}</p>{%- endif -%}
   {%- if page.link -%}<p><a class="button" href="{{ page.link }}">{{ page.link_label | default: "Visit" }}</a></p>{%- endif -%}
   {% include cta.html %}
 </article>

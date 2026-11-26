@@ -1,6 +1,6 @@
 {%- comment -%} Card cover: an image if the item has one, otherwise a generated gradient. {%- endcomment -%}
 {%- assign item = include.item -%}
 <div class="cover{% unless item.image %} cover-gen{% endunless %}" style="--hue: {{ item.hue | default: 160 }}">
-  {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="" loading="lazy">
+  {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
   {%- endif -%}
 </div>
