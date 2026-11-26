@@ -15,10 +15,10 @@
         <a class="see-all" href="{{ include.all_url | relative_url }}">See all</a>
       </div>
     </div>
-  </div>
-  <div class="rail" data-rail{% if include.autoscroll %} data-autoscroll{% endif %} tabindex="0" aria-label="{{ include.title }}">
+    <div class="rail" data-rail{% if include.autoscroll %} data-autoscroll{% endif %} tabindex="0" aria-label="{{ include.title }}">
     {%- for item in include.items -%}
       {% include card.html item=item kind=include.kind %}
     {%- endfor -%}
+    </div>
   </div>
 </section>
