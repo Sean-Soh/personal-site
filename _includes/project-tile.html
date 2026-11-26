@@ -1,0 +1,19 @@
+{%- comment -%} Large project tile for the Projects page. Params: item, index {%- endcomment -%}
+{%- assign item = include.item -%}
+<article class="tile">
+  <a class="tile-media" href="{{ item.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {% include cover.html item=item %}
+  </a>
+  <div class="tile-body">
+    <span class="tile-num">{% if include.index < 10 %}0{% endif %}{{ include.index }}</span>
+    <h3 class="tile-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+    <dl class="tile-facts">
+      {%- if item.studio -%}<div><dt>Studio</dt><dd>{{ item.studio }}</dd></div>{%- endif -%}
+      {%- if item.role -%}<div><dt>Role</dt><dd>{{ item.role }}</dd></div>{%- endif -%}
+      {%- if item.period -%}<div><dt>When</dt><dd>{{ item.period }}</dd></div>{%- endif -%}
+    </dl>
+    <p class="tile-summary">{{ item.summary }}</p>
+    {%- if item.tags.size > 0 -%}<ul class="tags">{% for t in item.tags %}<li>{{ t }}</li>{% endfor %}</ul>{%- endif -%}
+    <a class="tile-more" href="{{ item.url | relative_url }}">View project {% include icon.html name="arrow-right" %}</a>
+  </div>
+</article>

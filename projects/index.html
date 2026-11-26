@@ -18,8 +18,8 @@ title: Projects
   <section class="project-section" id="{{ sec.id }}" aria-labelledby="{{ sec.id }}-title">
     <h2 id="{{ sec.id }}-title">{{ sec.title }}</h2>
     <p class="muted">{{ sec.intro }}</p>
-    <div class="grid">
-      {%- for item in items -%}{% include card.html item=item kind="projects" %}{%- endfor -%}
+    <div class="tiles">
+      {%- for item in items -%}{% include project-tile.html item=item index=forloop.index %}{%- endfor -%}
     </div>
   </section>
   {%- endfor -%}
