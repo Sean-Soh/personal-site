@@ -35,7 +35,7 @@
     if (next) next.addEventListener('click', function () { step(1); });
   });
 
-  // Writing tag filter (supports ?tag=name links) -------------------------
+  // Blog tag filter (supports ?tag=name links) -------------------------
   var filter = document.querySelector('[data-filter]');
   if (filter) {
     var cards = document.querySelectorAll('[data-filter-target] .card');

@@ -14,8 +14,8 @@ author:
 nav:
   - title: Home
     url: /
-  - title: Writing
-    url: /writing/
+  - title: Blog
+    url: /blog/
   - title: Projects
     url: /projects/
   - title: Resources
@@ -25,7 +25,7 @@ nav:
   - title: Work with me
     url: /work-with-me/
 
-permalink: /writing/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 collections:
   projects:

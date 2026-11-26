@@ -11,4 +11,4 @@ This is a placeholder first post. Use it to say why you started writing in publi
 
 1. Add a file to `_posts/` named `YYYY-MM-DD-your-title.md`.
 2. Copy the front matter from this file (title, summary, tags).
-3. Write in Markdown below it. It appears on the home page and on Writing automatically.
+3. Write in Markdown below it. It appears on the home page and on the Blog page automatically.

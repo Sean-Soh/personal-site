@@ -7,7 +7,7 @@ layout: null
   {
     "title": {{ d.title | jsonify }},
     "url": {{ d.url | relative_url | jsonify }},
-    "type": {% if d.collection == "posts" %}"Writing"{% else %}{{ d.collection | capitalize | jsonify }}{% endif %},
+    "type": {% if d.collection == "posts" %}"Blog"{% else %}{{ d.collection | capitalize | jsonify }}{% endif %},
     "tags": {{ d.tags | jsonify }},
     "text": {{ d.summary | append: " " | append: d.content | strip_html | strip_newlines | truncatewords: 80 | jsonify }}
   }{% unless forloop.last %},{% endunless %}

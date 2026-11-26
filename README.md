@@ -12,14 +12,14 @@ _data/focus.yml     "What I focus on" chips on the home page
 _data/social.yml    Contact icons (email, LinkedIn, IMDb, GitHub, X)
 _data/experience.yml  Timeline on the About page
 
-_posts/             Writing. One Markdown file per post
+_posts/             Blog posts. One Markdown file per post
 _projects/          Projects / ventures / case studies
 _resources/         Guides, templates, reading lists to share
 
-index.html          Home: hero, focus, Projects / Writing / Resources rails, Let's connect
+index.html          Home: hero, focus, Projects / Blog / Resources rails, Let's connect
 about.md            About page
 work-with-me.md     Collaboration offerings and contact
-writing/ projects/ resources/   Listing pages (generated from the folders above)
+blog/ projects/ resources/      Listing pages (generated from the folders above)
 
 _layouts/  _includes/  assets/   Templates, styles (assets/style.css) and scripts
 ```
@@ -40,7 +40,7 @@ hue: 200          # optional: colour of the generated cover (0-360)
 Write here in Markdown.
 ```
 
-It shows up on the home page, the Writing page (with tag filters), search and the RSS feed automatically.
+It shows up on the home page, the Blog page (with tag filters), search and the RSS feed automatically.
 
 **A project or resource:** add a Markdown file to `_projects/` or `_resources/` with the same fields plus `meta` (the small line above the title, e.g. `Founder · 2024 – now`), `order` (position), and optional `link` / `link_label`.
 
@@ -49,7 +49,7 @@ It shows up on the home page, the Writing page (with tag filters), search and th
 - Light and dark mode (follows the system, with a toggle)
 - Sticky header, mobile menu, site search (press `/`)
 - Horizontal card rails with arrows on the home page
-- Tag filters on Writing (shareable via `/writing/?tag=business`)
+- Tag filters on the Blog (shareable via `/blog/?tag=business`)
 - RSS feed at `/feed.xml`, Open Graph tags for link previews
 
 ## Preview locally (optional)

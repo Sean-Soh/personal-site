@@ -8,7 +8,7 @@ title: Home
     <h1 class="display">Bridging creative direction and software engineering to ship <em>visually ambitious games</em> at scale.</h1>
     <p class="lede">With a formal engineering background and end-to-end production experience, I architect resilient DCC-to-engine pipelines, write custom shaders and tools, and lead cross-disciplinary teams from early R&amp;D to final optimization.</p>
     <div class="actions">
-      <a class="button" href="{{ '/writing/' | relative_url }}">Read my writing</a>
+      <a class="button" href="{{ '/blog/' | relative_url }}">Read the blog</a>
       <a class="button ghost" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>
     </div>
   </div>
@@ -28,7 +28,7 @@ title: Home
 {%- assign projects = site.projects | sort: "order" -%}
 {% include rail.html id="projects" title="Projects" intro="Ventures, collaborations and things I've built." items=projects kind="project" all_url="/projects/" %}
 
-{% include rail.html id="writing" title="Writing" intro="Thoughts and notes, newest first." items=site.posts kind="post" all_url="/writing/" %}
+{% include rail.html id="blog" title="Blog" intro="Thoughts and notes, newest first." items=site.posts kind="post" all_url="/blog/" %}
 
 {%- assign resources = site.resources | sort: "order" -%}
 {% include rail.html id="resources" title="Resources" intro="Guides, templates and frameworks you're free to use." items=resources kind="resource" all_url="/resources/" %}
