@@ -2,6 +2,11 @@
 - id: games
   title: Games
   intro: Games I have worked on, across PC, console, mobile and location-based VR.
+  # Sub-groups shown under the main list. A project joins one with `group:`.
+  groups:
+    - id: league-minigames
+      title: League minigames
+      intro: Interactive minigames and event metagames made for League of Legends.
 - id: film
   title: TV Animation & Film
   intro: Animated series, films and CG productions from my years in animation.

@@ -9,6 +9,7 @@ title: Projects
     <nav class="section-jump" aria-label="Project sections">
       {%- for sec in site.data.project_sections -%}
       <a class="chip" href="#{{ sec.id }}">{{ sec.title }}</a>
+      {%- for grp in sec.groups -%}<a class="chip" href="#{{ grp.id }}">{{ grp.title }}</a>{%- endfor -%}
       {%- endfor -%}
     </nav>
   </header>
@@ -18,9 +19,22 @@ title: Projects
   <section class="project-section" id="{{ sec.id }}" aria-labelledby="{{ sec.id }}-title">
     <h2 id="{{ sec.id }}-title">{{ sec.title }}</h2>
     <p class="muted">{{ sec.intro }}</p>
+    {%- assign main = items | where_exp: "i", "i.group == nil" -%}
     <div class="tiles">
-      {%- for item in items -%}{% include project-tile.html item=item %}{%- endfor -%}
+      {%- for item in main -%}{% include project-tile.html item=item %}{%- endfor -%}
     </div>
+    {%- for grp in sec.groups -%}
+    {%- assign gitems = items | where: "group", grp.id -%}
+    {%- if gitems.size > 0 -%}
+    <div class="project-group" id="{{ grp.id }}">
+      <h3 class="project-group-title">{{ grp.title }}</h3>
+      {%- if grp.intro -%}<p class="muted">{{ grp.intro }}</p>{%- endif -%}
+      <div class="tiles">
+        {%- for item in gitems -%}{% include project-tile.html item=item %}{%- endfor -%}
+      </div>
+    </div>
+    {%- endif -%}
+    {%- endfor -%}
   </section>
   {%- endfor -%}
 </div>
