@@ -9,7 +9,7 @@ Built with [Jekyll](https://jekyllrb.com/), which GitHub Pages runs for you. You
 ```
 _config.yml         Site name, role line, email, navigation  ← edit first
 _data/focus.yml     "What I focus on" chips on the home page
-_data/social.yml    Contact icons (email, LinkedIn, GitHub, X)
+_data/social.yml    Contact icons (email, LinkedIn, IMDb, GitHub, X)
 _data/experience.yml  Timeline on the About page
 
 _posts/             Writing. One Markdown file per post
@@ -65,8 +65,7 @@ Then visit http://localhost:4000.
 
 ## To do
 
-- [ ] Set your role line and contact email in `_config.yml` and `_data/social.yml`
-- [ ] Add your LinkedIn URL in `_data/social.yml`
+- [ ] Set your role line in `_config.yml`
 - [ ] Rewrite the hero headline and intro in `index.html`
 - [ ] Replace placeholder posts, projects and resources
 - [ ] Fill in About and Work with me

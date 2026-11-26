@@ -8,7 +8,7 @@ baseurl: ""
 author:
   name: Sean Soh
   role_line: "Builder · Writer · Collaborator"   # small line above the headline
-  email: hello@example.com                       # TODO: your real contact email
+  email: sean@seansoh.com
 
 # Main navigation (order matters)
 nav:

@@ -1,10 +1,13 @@
-# Contact icons shown in "Let's connect" and the footer. Leave url empty to hide one.
+# Contact icons shown in "Let's connect", About and the footer. Leave url empty to hide one.
 - name: Email
   icon: mail
-  url: mailto:hello@example.com      # TODO
+  url: mailto:sean@seansoh.com
 - name: LinkedIn
   icon: linkedin
-  url: ""                            # TODO: https://www.linkedin.com/in/...
+  url: https://www.linkedin.com/in/sean-soh/
+- name: IMDb
+  icon: film
+  url: https://www.imdb.com/name/nm4959924/
 - name: GitHub
   icon: github
   url: https://github.com/Sean-Soh
