@@ -1,0 +1,24 @@
+{%- comment -%}
+  Horizontal card rail used on the home page.
+  Params: id, title, intro, items, kind, all_url
+{%- endcomment -%}
+<section class="section" id="{{ include.id }}" aria-labelledby="{{ include.id }}-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 id="{{ include.id }}-title">{{ include.title }}</h2>
+        {%- if include.intro -%}<p class="muted">{{ include.intro }}</p>{%- endif -%}
+      </div>
+      <div class="rail-controls">
+        <button class="icon-btn" type="button" data-rail-prev aria-label="Scroll back">{% include icon.html name="arrow-left" %}</button>
+        <button class="icon-btn" type="button" data-rail-next aria-label="Scroll forward">{% include icon.html name="arrow-right" %}</button>
+        <a class="see-all" href="{{ include.all_url | relative_url }}">See all</a>
+      </div>
+    </div>
+  </div>
+  <div class="rail" data-rail tabindex="0" aria-label="{{ include.title }}">
+    {%- for item in include.items -%}
+      {% include card.html item=item kind=include.kind %}
+    {%- endfor -%}
+  </div>
+</section>

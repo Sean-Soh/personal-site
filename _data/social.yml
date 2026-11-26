@@ -1,0 +1,13 @@
+# Contact icons shown in "Let's connect" and the footer. Leave url empty to hide one.
+- name: Email
+  icon: mail
+  url: mailto:hello@example.com      # TODO
+- name: LinkedIn
+  icon: linkedin
+  url: ""                            # TODO: https://www.linkedin.com/in/...
+- name: GitHub
+  icon: github
+  url: https://github.com/Sean-Soh
+- name: X
+  icon: x
+  url: ""

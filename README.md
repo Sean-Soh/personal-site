@@ -1,47 +1,72 @@
 # personal-site
 
-Sean Soh's personal brand website: a home for thoughts, knowledge sharing, and business collaboration opportunities.
+Sean Soh's personal brand website: a home for thoughts, knowledge sharing and business collaboration. Live at www.seansoh.com (GitHub Pages).
 
-## What's here
+Built with [Jekyll](https://jekyllrb.com/), which GitHub Pages runs for you. You never need to build anything to publish: push to `main` and the site updates. Content is plain Markdown.
 
-A plain HTML and CSS starter with no build step, so you can open any file in a browser and see it.
-
-```
-index.html            Home page: intro, recent writing, collaboration call-to-action
-about.html            About you, with links elsewhere
-work-with-me.html     Collaboration and contact page
-writing/index.html    List of all posts
-writing/hello-world.html  Example post (copy this to write a new one)
-assets/style.css      All styling (light and dark mode)
-```
-
-## Preview locally
-
-Open `index.html` in your browser, or run a tiny local server from the repo folder:
+## Where things live
 
 ```
-python3 -m http.server 8000
+_config.yml         Site name, role line, email, navigation  ← edit first
+_data/focus.yml     "What I focus on" chips on the home page
+_data/social.yml    Contact icons (email, LinkedIn, GitHub, X)
+_data/experience.yml  Timeline on the About page
+
+_posts/             Writing. One Markdown file per post
+_projects/          Projects / ventures / case studies
+_resources/         Guides, templates, reading lists to share
+
+index.html          Home: hero, focus, Projects / Writing / Resources rails, Let's connect
+about.md            About page
+work-with-me.md     Collaboration offerings and contact
+writing/ projects/ resources/   Listing pages (generated from the folders above)
+
+_layouts/  _includes/  assets/   Templates, styles (assets/style.css) and scripts
 ```
 
-Then visit http://localhost:8000.
+## Adding content
 
-## Writing a new post
+**A post:** create `_posts/YYYY-MM-DD-my-title.md`:
 
-1. Copy `writing/hello-world.html` to `writing/your-post-name.html`.
-2. Edit the title, date, and content.
-3. Add a link to it in `writing/index.html` (and on the home page under "Recent writing").
+```markdown
+---
+title: "My title"
+summary: One sentence shown on cards and in search results.
+tags: [Business, Lessons]
+hue: 200          # optional: colour of the generated cover (0-360)
+# image: /assets/images/my-cover.jpg   # optional real cover image
+---
 
-## Publishing with GitHub Pages
+Write here in Markdown.
+```
 
-1. On GitHub, go to **Settings → Pages**.
-2. Under "Build and deployment", choose **Deploy from a branch**, branch `main`, folder `/ (root)`.
-3. After a minute the site will be live at `https://sean-soh.github.io/personal-site/`.
+It shows up on the home page, the Writing page (with tag filters), search and the RSS feed automatically.
 
-A custom domain can be added on the same settings page later.
+**A project or resource:** add a Markdown file to `_projects/` or `_resources/` with the same fields plus `meta` (the small line above the title, e.g. `Founder · 2024 – now`), `order` (position), and optional `link` / `link_label`.
+
+## Features
+
+- Light and dark mode (follows the system, with a toggle)
+- Sticky header, mobile menu, site search (press `/`)
+- Horizontal card rails with arrows on the home page
+- Tag filters on Writing (shareable via `/writing/?tag=business`)
+- RSS feed at `/feed.xml`, Open Graph tags for link previews
+
+## Preview locally (optional)
+
+Needs Ruby. From the repo folder:
+
+```
+bundle install
+bundle exec jekyll serve
+```
+
+Then visit http://localhost:4000.
 
 ## To do
 
-- [ ] Replace placeholder text on About and Work with me
-- [ ] Set your real contact email in `work-with-me.html`
-- [ ] Add your LinkedIn link in `about.html`
-- [ ] Write the first real post
+- [ ] Set your role line and contact email in `_config.yml` and `_data/social.yml`
+- [ ] Add your LinkedIn URL in `_data/social.yml`
+- [ ] Rewrite the hero headline and intro in `index.html`
+- [ ] Replace placeholder posts, projects and resources
+- [ ] Fill in About and Work with me

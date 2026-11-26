@@ -1,0 +1,14 @@
+---
+layout: default
+title: Projects
+---
+<div class="wrap page">
+  <header class="page-head">
+    <h1>Projects</h1>
+    <p class="lede">Ventures, collaborations and work I've been part of.</p>
+  </header>
+  {%- assign items = site.projects | sort: "order" -%}
+  <div class="grid">
+    {%- for item in items -%}{% include card.html item=item kind="projects" %}{%- endfor -%}
+  </div>
+</div>

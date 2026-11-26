@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{%- assign section = page.collection | capitalize -%}
+<article class="wrap narrow page">
+  <header class="page-head">
+    <p class="eyebrow"><a href="{{ '/' | append: page.collection | append: '/' | relative_url }}">{{ section }}</a>{% if page.meta %} · {{ page.meta }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {%- if page.summary -%}<p class="lede">{{ page.summary }}</p>{%- endif -%}
+    {%- if page.tags.size > 0 -%}<ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>{%- endif -%}
+  </header>
+  {% include cover.html item=page %}
+  <div class="prose">
+    {{ content }}
+  </div>
+  {%- if page.link -%}<p><a class="button" href="{{ page.link }}">{{ page.link_label | default: "Visit" }}</a></p>{%- endif -%}
+  {% include cta.html %}
+</article>

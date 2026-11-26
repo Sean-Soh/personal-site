@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Writing · Sean Soh</title>
-  <meta name="description" content="Thoughts, knowledge sharing, and collaboration opportunities.">
-  <link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-  <header class="site">
-    <div class="wrap">
-      <a class="name" href="../index.html">Sean Soh</a>
-      <nav>
-        <a href="../writing/index.html" aria-current="page">Writing</a>
-        <a href="../about.html">About</a>
-        <a href="../work-with-me.html">Work with me</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
+---
+layout: default
+title: Writing
+---
+<div class="wrap page">
+  <header class="page-head">
     <h1>Writing</h1>
-    <p class="lede">Thoughts, notes, and things worth sharing.</p>
-    <ul class="posts">
-      <li><a href="hello-world.html">Hello, world: why I started this site</a><time datetime="2026-11-24">24 Nov 2026</time></li>
-    </ul>
-  </main>
-  <footer class="site">
-    <div class="wrap">&copy; <span id="y"></span> Sean Soh</div>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+    <p class="lede">Thoughts, lessons and notes on what I'm working on. Pick a topic to filter.</p>
+  </header>
+  {%- assign all_tags = "" | split: "" -%}
+  {%- for p in site.posts -%}{%- assign all_tags = all_tags | concat: p.tags -%}{%- endfor -%}
+  {%- assign all_tags = all_tags | uniq | sort_natural -%}
+  <div class="tag-filter" role="group" aria-label="Filter by topic" data-filter>
+    <button type="button" class="chip" aria-pressed="true" data-tag="">All <span>{{ site.posts.size }}</span></button>
+    {%- for t in all_tags -%}
+      {%- assign n = 0 -%}{%- for p in site.posts -%}{%- if p.tags contains t -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      <button type="button" class="chip" aria-pressed="false" data-tag="{{ t | downcase }}">{{ t }} <span>{{ n }}</span></button>
+    {%- endfor -%}
+  </div>
+  <div class="grid" data-filter-target>
+    {%- for post in site.posts -%}{% include card.html item=post kind="post" %}{%- endfor -%}
+  </div>
+  <p class="empty muted" hidden>Nothing here yet for that topic.</p>
+</div>

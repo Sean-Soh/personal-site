@@ -1,40 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sean Soh</title>
-  <meta name="description" content="Thoughts, knowledge sharing, and collaboration opportunities.">
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-  <header class="site">
-    <div class="wrap">
-      <a class="name" href="index.html">Sean Soh</a>
-      <nav>
-        <a href="writing/index.html">Writing</a>
-        <a href="about.html">About</a>
-        <a href="work-with-me.html">Work with me</a>
-      </nav>
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">{{ site.author.role_line }}</p>
+    <h1 class="display">I help ideas turn into <em>working businesses</em>, and I write down what I learn along the way.</h1>
+    <p class="lede">This is placeholder copy. Replace it with two or three sentences about who you are, the problems you like solving, and the kind of people you want to meet.</p>
+    <div class="actions">
+      <a class="button" href="{{ '/writing/' | relative_url }}">Read my writing</a>
+      <a class="button ghost" href="{{ '/work-with-me/' | relative_url }}">Work with me</a>
     </div>
-  </header>
-  <main class="wrap">
-    <h1>Hi, I'm Sean.</h1>
-    <p class="lede">I write about what I'm learning, share what I know, and look for good people to build things with.</p>
+  </div>
+</section>
 
-    <h2>Recent writing</h2>
-    <ul class="posts">
-      <li><a href="writing/hello-world.html">Hello, world: why I started this site</a><time datetime="2026-11-24">24 Nov 2026</time></li>
+<section class="section focus" aria-labelledby="focus-title">
+  <div class="wrap">
+    <h2 id="focus-title" class="label">What I focus on</h2>
+    <ul class="focus-list">
+      {%- for f in site.data.focus -%}
+      <li>{% include icon.html name=f.icon %}<span>{{ f.name }}</span></li>
+      {%- endfor -%}
     </ul>
-    <p><a href="writing/index.html">All writing &rarr;</a></p>
+  </div>
+</section>
 
-    <h2>Let's work together</h2>
-    <p>Open to collaborations, advisory work, and interesting projects.</p>
-    <p><a class="button" href="work-with-me.html">See how we can work together</a></p>
-  </main>
-  <footer class="site">
-    <div class="wrap">&copy; <span id="y"></span> Sean Soh</div>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+{%- assign projects = site.projects | sort: "order" -%}
+{% include rail.html id="projects" title="Projects" intro="Ventures, collaborations and things I've built." items=projects kind="project" all_url="/projects/" %}
+
+{% include rail.html id="writing" title="Writing" intro="Thoughts and notes, newest first." items=site.posts kind="post" all_url="/writing/" %}
+
+{%- assign resources = site.resources | sort: "order" -%}
+{% include rail.html id="resources" title="Resources" intro="Guides, templates and frameworks you're free to use." items=resources kind="resource" all_url="/resources/" %}
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="connect">
+      <div>
+        <h2 id="contact-title">Let's connect</h2>
+        <p class="muted">Have a project, partnership or question in mind? I read every message.</p>
+      </div>
+      <div class="connect-actions">
+        <a class="button" href="{{ '/work-with-me/' | relative_url }}">Ways to work together</a>
+        <div class="social">
+          {%- for s in site.data.social -%}{%- if s.url != "" -%}
+          <a href="{{ s.url }}" aria-label="{{ s.name }}" title="{{ s.name }}">{% include icon.html name=s.icon %}</a>
+          {%- endif -%}{%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

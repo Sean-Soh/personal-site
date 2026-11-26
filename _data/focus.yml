@@ -1,0 +1,13 @@
+# "What I focus on" strip on the home page. Replace with your own areas.
+- name: Strategy
+  icon: compass
+- name: Product
+  icon: layers
+- name: Operations
+  icon: gear
+- name: Partnerships
+  icon: handshake
+- name: Writing
+  icon: pen
+- name: Mentoring
+  icon: spark

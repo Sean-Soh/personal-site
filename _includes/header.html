@@ -1,0 +1,36 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">{{ site.author.name | slice: 0 }}</span>
+      <span class="brand-name">{{ site.author.name }}</span>
+    </a>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">{% include icon.html name="menu" %}</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      {%- for item in site.nav -%}
+        {%- assign active = false -%}
+        {%- if item.url == "/" -%}
+          {%- if page.url == "/" -%}{%- assign active = true -%}{%- endif -%}
+        {%- elsif page.url contains item.url -%}
+          {%- assign active = true -%}
+        {%- endif -%}
+        <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor -%}
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" type="button" data-search-open aria-label="Search site">{% include icon.html name="search" %}</button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <span class="only-light">{% include icon.html name="moon" %}</span><span class="only-dark">{% include icon.html name="sun" %}</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<dialog class="search" id="search">
+  <form method="dialog" class="search-bar">
+    {% include icon.html name="search" %}
+    <input type="search" id="search-input" placeholder="Search writing, projects, resources" autocomplete="off" aria-label="Search">
+    <button class="search-close" value="close" aria-label="Close search">Esc</button>
+  </form>
+  <ul class="search-results" id="search-results"></ul>
+</dialog>

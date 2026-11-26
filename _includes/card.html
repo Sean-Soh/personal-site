@@ -1,0 +1,19 @@
+{%- comment -%} Card for a post, project or resource. Pass item=... and kind="post|project|resource". {%- endcomment -%}
+{%- assign item = include.item -%}
+<article class="card" data-tags="{{ item.tags | join: ' ' | downcase }}">
+  <a class="card-link" href="{{ item.url | relative_url }}">
+    {% include cover.html item=item %}
+    <div class="card-body">
+      {%- if include.kind == "post" -%}
+        <time class="meta" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%-d %b %Y" }}</time>
+      {%- elsif item.meta -%}
+        <p class="meta">{{ item.meta }}</p>
+      {%- endif -%}
+      <h3>{{ item.title }}</h3>
+      {%- if item.tags.size > 0 -%}
+      <ul class="tags">{% for t in item.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {%- endif -%}
+      <p>{{ item.summary | default: item.excerpt | strip_html | truncate: 140 }}</p>
+    </div>
+  </a>
+</article>

@@ -3,3 +3,7 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
