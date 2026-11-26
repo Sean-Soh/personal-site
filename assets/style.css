@@ -24,7 +24,7 @@
   --glow: rgb(193 75 63 / .28);
   --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 30px rgb(0 0 0 / .35);
 
-  --max: 72rem;
+  --max: 94rem;          /* 72rem + 30% */
   --narrow: 44rem;
   --gutter: 1.25rem;
   --radius: 14px;
@@ -143,7 +143,7 @@ p { margin: 0 0 1em; }
     radial-gradient(60rem 28rem at 85% -10%, var(--glow), transparent 70%),
     radial-gradient(40rem 22rem at 0% 0%, rgb(224 165 58 / .08), transparent 70%);
 }
-.display { font-size: clamp(1.9rem, .8rem + 3vw, 3.45rem); line-height: .95; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
+.display { font-size: clamp(2.4rem, 1.3rem + 3vw, 3.95rem); line-height: .95; max-width: 22ch; text-wrap: balance; margin: .4em 0 .5em; }
 .display em { font-style: normal; color: var(--link); }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 
@@ -347,9 +347,9 @@ p { margin: 0 0 1em; }
 /* Dim the left side, where the text sits, and let the reel show on the right. */
 .hero-shade { position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: linear-gradient(90deg, rgb(10 6 7 / .94) 0%, rgb(10 6 7 / .86) 30%, rgb(10 6 7 / .5) 58%, rgb(10 6 7 / .12) 85%); }
-.hero-content { position: relative; max-width: 40rem; }
+.hero-content { position: relative; max-width: 52rem; }
 .hero-card .eyebrow { margin-top: 0; }
-.hero-card .display { color: #fff; max-width: 21ch; margin: .35em 0 .55em; }
+.hero-card .display { color: #fff; max-width: 24ch; margin: .35em 0 .55em; }
 .hero-card .eyebrow, .hero-card .display em { color: var(--gold); }
 .hero-card .lede { color: rgb(244 239 234 / .82); font-size: 1.05rem; }
 .hero-card .actions { margin-top: 1.5rem; }
