@@ -7,7 +7,8 @@ platforms: "Mobile"
 meta: "DreamRocket · VFX / Technical Artist"
 summary: "A mobile puzzle game I shipped at DreamRocket as the primary VFX artist."
 tags: [Mobile, Puzzle]
-order: 4.7
+order: 10
+group: more-games
 category: games
 image: /assets/images/projects/kutsuki-puzzle-piko-poster.jpg
 poster: true

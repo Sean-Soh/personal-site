@@ -7,6 +7,9 @@
     - id: league-minigames
       title: League minigames
       intro: Interactive minigames and event metagames made for League of Legends.
+    - id: more-games
+      title: More games
+      intro: Other titles I have worked on.
 - id: film
   title: TV Animation & Film
   intro: Animated series, films and CG productions from my years in animation.
