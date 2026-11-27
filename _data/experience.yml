@@ -1,13 +1,101 @@
-# Timeline on the About page. Newest first. Placeholder entries.
-- period: 2024 – now
-  title: Your current role
-  org: Company or venture
-  summary: One line on what you do and the result you are proudest of.
-- period: 2020 – 2024
-  title: Previous role
-  org: Company
-  summary: One line on scope, team or impact.
-- period: 2016 – 2020
-  title: Earlier role
-  org: Company
-  summary: One line on what you learned here.
+# Timeline on the About page. Newest first.
+# Source: resume and LinkedIn profile. Project pages whose `studio` matches `org`
+# and whose `role` matches a role title are linked under the entry automatically.
+#
+# Single role:   title + period
+# Several roles: roles: [{ title, period }] (newest first)
+- org: Riot Games
+  title: Manager, Technical Art
+  period: Nov 2021 – Present
+  location: Singapore
+  summary: Technical Art leadership for live service titles League of Legends and Teamfight Tactics, driving rendering and visual realization strategy with Art Directors, Rendering Engineers and Technical Artists to balance creative vision, performance and production feasibility.
+  highlights:
+    - Led and empowered global partner production teams to deliver 300+ skins through technical art direction, cross-functional alignment and production blocker resolution.
+    - Lead technical implementation and performance optimization for interactive experiences, including Motion Comics and metagame titles Soul Fighter, Jinx Fixes Everything and Battle of Koeshin.
+    - Led a cross-functional effort to resolve material inconsistencies across 100+ base materials and approximately 5,000 assets, supporting broader shader infrastructure improvements.
+    - Guided workflow optimizations that cut Motion Comics localization turnaround from multiple days to approximately one day.
+    - Established scalable workflows and standards across look development, shaders and materials, asset validation, optimization and release support, boosting team self-sufficiency.
+    - Lead and mentor Technical Artists across internal and external teams in LAX, Shanghai and Vietnam, and partner with cross-studio Art, Engineering, TechOps and Production on the Technical Art roadmap.
+
+- org: Ubisoft Singapore
+  title: Senior Technical Artist, VFX
+  period: May 2020 – Nov 2021
+  location: Singapore
+  summary: Developed and delivered tools and systems for the VFX team, focused on shaders, materials, FX rendering and tooling.
+  highlights:
+    - Set up and maintained the validation pipeline for VFX assets.
+
+- org: Sandbox VR
+  title: Senior Technical Artist
+  period: Nov 2019 – May 2020
+  location: Singapore
+  summary: Owned the shading, VFX and rendering pipelines for next-gen Sandbox VR games.
+  highlights:
+    - Ported the entire project from the legacy render pipeline to a playable HDRP VR build in a short timeframe.
+    - Created and optimized visual art assets, VFX and custom shaders using Shader Graph, VFX Graph, HLSL, Houdini and C#.
+    - Ran R&D on efficient visual effects methods and asset authoring processes to reach AAA production quality.
+
+- org: Boomzap Entertainment
+  title: Senior Technical Artist
+  period: Nov 2018 – Nov 2019
+  location: Singapore
+  summary: Supported the tech art needs of the Boomzap VR lab and Sandbox VR projects, owning the art pipelines and the asset integration process.
+  highlights:
+    - Managed and guided outsource partners to meet quality standards and technical requirements.
+    - Created and optimized art assets and VFX, and wrote custom shaders for efficient VR production pipelines.
+
+- org: Rock Nano Global
+  title: Business Development / Technical Art Director
+  period: Jun 2018 – Oct 2018
+  location: Singapore
+  summary: Provided technical art direction and developed tools to handle uniform game data across different products.
+  highlights:
+    - Resolved and optimized real-time rendering pipeline issues across engines including Unity3D and Lumberyard.
+    - Established new business opportunities across game publishers, developers, content creators and e-sports, and advised clients and investors on production targets and contracts.
+
+- org: goGame, a subsidiary of SEGA
+  title: Technical Artist / Client Engineer
+  period: Feb 2017 – May 2018
+  location: Singapore
+  summary: Provided technical direction and implemented solutions for rigging, 2D FX and sequences, and UI/UX.
+  highlights:
+    - Developed a full-feature screenplay dialog system workflow from scratch using VBA, XML and Squirrel for the in-house proprietary engine.
+    - Created 2D animation assets for cutscenes and special effects, improved their workflow, and implemented game flow logic in Squirrel.
+
+- org: Star GG Pte Ltd
+  title: Lead Technical Artist
+  period: Sep 2016 – Jan 2017
+  location: Singapore
+  summary: Developed techniques and implemented solutions spanning broadcasting, AR and VR experiences down to the core engine in C++.
+  highlights:
+    - Integrated Qt, OpenCV and other hardware SDKs, and created 3D models and FX/motion graphics.
+
+- org: DreamRocket Pte Ltd
+  title: VFX / Technical Artist
+  period: Sep 2015 – Sep 2016
+  location: Singapore
+  summary: Shipped the mobile game Kutsuki Puzzle PIKO as primary VFX artist, designing and producing game FX in Unity and C#.
+  highlights:
+    - Supported the engineering team by troubleshooting reported bugs, applying fixes and optimizing gameplay elements in C#.
+
+- org: Tiny Island Productions
+  period: 2006 – 2015
+  location: Singapore
+  roles:
+    - title: Producer
+      period: Mar 2011 – Sep 2015
+    - title: Lead Technical Officer
+      period: Jan 2013 – Aug 2015
+    - title: Technical Director
+      period: Jan 2006 – Aug 2015
+  summary: Nearly ten years across technical direction, company technology strategy and production on CG animated films and series.
+  highlights:
+    - Led the team delivering titles including Ben 10 Destroy All Aliens (Cartoon Network, 69-minute film), Talking Tom and Friends (Outfit7), Dream Defenders (26×22 min series) and GFighter (Cyber Group Studios, 26×22 min series), with budget, resource and quality control and client-side negotiation.
+    - Made key decisions on the company's technical direction, built an efficient CG production pipeline, and planned infrastructure and automation equipment deployments.
+    - Established an in-house rigging system and coached the team on the methodology; integrated a stereographic pipeline into TV animation production; led look development and shading.
+
+- org: Southern Star Singapore
+  title: CG Artist
+  period: Jan 2004 – Dec 2005
+  location: Singapore
+  summary: Developed image processing tools for team efficiency and improved the stop motion/3D integration pipeline on Bottle Top Bill Season 1 and Raggs.

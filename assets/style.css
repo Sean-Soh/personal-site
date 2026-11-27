@@ -24,7 +24,7 @@
   --glow: rgb(193 75 63 / .28);
   --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 30px rgb(0 0 0 / .35);
 
-  --max: 94rem;          /* 72rem + 30% */
+  --max: calc(1400px + 2 * var(--gutter));  /* 1400px content + side gutters */
   --narrow: 44rem;
   --gutter: 1.25rem;
   --radius: 14px;
@@ -262,13 +262,18 @@ p { margin: 0 0 1em; }
 .cta h2 { font-size: 2rem; }
 
 .timeline { list-style: none; padding: 0; margin: 1.5rem 0; border-left: 2px solid var(--border); }
-.timeline li { position: relative; padding: 0 0 1.75rem 1.5rem; }
-.timeline li::before {
+.timeline > li { position: relative; padding: 0 0 1.75rem 1.5rem; }
+.timeline > li::before {
   content: ""; position: absolute; left: -7px; top: .35rem; width: 12px; height: 12px;
   border-radius: 50%; background: var(--bg); border: 2px solid var(--link);
 }
 .timeline h3 { margin: .25rem 0 .3rem; }
 .timeline p { color: var(--muted); margin: 0; }
+.timeline .roles { list-style: none; padding: 0; margin: .2rem 0 .6rem; }
+.timeline .roles li { margin: .15em 0; }
+.timeline .highlights { color: var(--muted); margin: .6rem 0 0; padding-left: 1.1rem; }
+.timeline .highlights li { margin: .3em 0; }
+.timeline .timeline-work { margin-top: .8rem; }
 
 .offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .offer { padding: 1.25rem; border: 1px solid var(--border); border-top: 3px solid var(--gold); border-radius: var(--radius); background: var(--surface); }
