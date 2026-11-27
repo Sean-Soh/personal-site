@@ -7,7 +7,8 @@ platforms: "iOS, Android, PC (Steam)"
 meta: "goGame (SEGA) · Technical Artist / Client Engineer"
 summary: "A real-time 4 vs 4 pirate battle game set in the world of ONE PIECE."
 tags: [Mobile, Multiplayer]
-order: 4.5
+order: 9
+group: more-games
 category: games
 image: /assets/images/projects/one-piece-bounty-rush-cover.jpg
 gallery:
