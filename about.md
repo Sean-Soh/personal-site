@@ -5,6 +5,10 @@ lede: Technical Art Manager at Riot Games, bridging art, engineering and game de
 permalink: /about/
 ---
 
+<div class="about-intro" markdown="1">
+<img class="about-photo" src="{{ '/assets/images/sean-soh.jpg' | relative_url }}" alt="Portrait of Sean Soh" width="640" height="800">
+<div markdown="1">
+
 I'm a Technical Art Manager at Riot Games in Singapore, with 11+ years in game development, 10 years in TV and film, and 5 years managing Technical Art teams on League of Legends and Teamfight Tactics. My work spans real-time rendering, shader and material development, visual realization, performance optimization and technical art direction.
 
 Over the years my focus has moved from hands-on technical problem-solving to building scalable Technical Art capabilities: developing teams, shaping technical strategy, improving production pipelines and creating stronger collaboration between Art, Engineering and Production.
@@ -16,6 +20,9 @@ I approach Technical Art with three principles:
 - **Strong teams multiply technical impact.** Mentorship, clear ownership, knowledge sharing and real cross-disciplinary collaboration make Technical Artists better.
 
 I enjoy connecting with fellow Technical Artists, Rendering Engineers, Art Directors and game development leaders to exchange ideas and advance the craft.
+
+</div>
+</div>
 
 ## Experience
 

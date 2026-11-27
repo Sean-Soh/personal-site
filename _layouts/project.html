@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign section = page.collection | capitalize -%}
-<article class="wrap narrow page">
+<article class="wrap page">
   <header class="page-head">
     <p class="eyebrow"><a href="{{ '/' | append: page.collection | append: '/' | relative_url }}">{{ section }}</a>{% if page.meta %} · {{ page.meta }}{% endif %}</p>
     <h1>{{ page.title }}</h1>

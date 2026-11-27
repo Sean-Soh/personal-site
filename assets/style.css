@@ -261,6 +261,10 @@ p { margin: 0 0 1em; }
 .cta { margin-top: 3.5rem; padding: 2rem; border-radius: var(--radius); }
 .cta h2 { font-size: 2rem; }
 
+.about-intro { display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.about-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+@media (max-width: 760px) { .about-intro { grid-template-columns: 1fr; } .about-photo { max-width: 16rem; } }
+
 .timeline { list-style: none; padding: 0; margin: 1.5rem 0; border-left: 2px solid var(--border); }
 .timeline > li { position: relative; padding: 0 0 1.75rem 1.5rem; }
 .timeline > li::before {
